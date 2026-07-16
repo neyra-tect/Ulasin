@@ -31,9 +31,9 @@ graph LR
     MU --> PB[Panduan Belajar]:::rect
     MU --> M[Materi]:::rect
     MU --> BC[Bank Contoh]:::rect
-    MU --> R[Ringkasan]:::rect
-    MU --> G[Glosarium]:::rect
-    MU --> L[Latihan / Evaluasi]:::rect
+    MU --> R[Peta Pikiran]:::rect
+    MU --> G[Kamus Saku]:::rect
+    MU --> L[Kastil Tantangan]:::rect
     MU --> DP[Daftar Pustaka]:::rect
     MU --> P[Pengembang]:::rect
     

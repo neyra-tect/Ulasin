@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-md mx-auto">
         <p className="text-center text-xs text-ink-lighter leading-relaxed">
           © 2026 <span className="font-bold">Ulasin</span> — Media Pembelajaran Teks Ulasan Interaktif
-          <br />Pendidikan Bahasa dan Sastra Indonesia By Mutiara Retno Damayanti
+          <br />By Mutiara Retno Damayanti
         </p>
       </div>
     </footer>

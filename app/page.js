@@ -51,6 +51,7 @@ const mapNodes = [
 const extraNodes = [
   { id: 'ringkasan', label: 'Peta Pikiran', icon: '🗺️', href: '/ringkasan', color: 'bg-orientasi' },
   { id: 'glosarium', label: 'Kamus Saku', icon: '🔍', href: '/glosarium', color: 'bg-tafsiran' },
+  { id: 'pengembang', label: 'Pengembang', icon: '👩‍💻', href: '/pengembang', color: 'bg-accent' },
 ];
 
 export default function HomePage() {

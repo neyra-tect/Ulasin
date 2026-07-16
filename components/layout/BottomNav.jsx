@@ -9,7 +9,7 @@ const navItems = [
   { href: '/materi', label: 'Materi', icon: '📚' },
   { href: '/contoh', label: 'Contoh', icon: '🍿' },
   { href: '/latihan', label: 'Kuis', icon: '🏆' },
-  { href: '/lainnya', label: 'Rangkuman', icon: '📋' },
+  { href: '/lainnya', label: 'Lainnya', icon: '📋' },
 ];
 
 export default function BottomNav() {

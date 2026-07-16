@@ -21,31 +21,34 @@ Aplikasi ini menggunakan alur belajar berbasis peta petualangan (RPG style) yang
 Berikut adalah visualisasi alur pengguna (user journey) saat menjelajahi web app Ulasin:
 
 ```mermaid
-graph TD
-    classDef mainNode fill:#FF6B35,stroke:#2D3436,stroke-width:3px,color:white,font-weight:bold,rx:12px,ry:12px
-    classDef subNode fill:#white,stroke:#2D3436,stroke-width:2px,color:#2D3436,rx:8px,ry:8px
-    classDef optNode fill:#4ECDC4,stroke:#2D3436,stroke-width:3px,color:white,font-weight:bold,rx:12px,ry:12px
+graph LR
+    classDef ellipse fill:white,stroke:black,stroke-width:1px,color:black
+    classDef rect fill:white,stroke:black,stroke-width:1px,color:black
+    classDef para fill:white,stroke:black,stroke-width:1px,color:black
 
-    A[Beranda & Peta Petualangan 🗺️]:::mainNode
+    HM([Halaman Muka]):::ellipse --> MU[/Menu Utama\]:::para
     
-    A --> B(Panduan Belajar ⛺):::subNode
-    A --> C[Materi 📚]:::mainNode
-    A --> D[Bank Contoh 🍿]:::mainNode
-    A --> E[Latihan 🏆]:::mainNode
+    MU --> PB[Panduan Belajar]:::rect
+    MU --> M[Materi]:::rect
+    MU --> BC[Bank Contoh]:::rect
+    MU --> R[Ringkasan]:::rect
+    MU --> G[Glosarium]:::rect
+    MU --> L[Latihan / Evaluasi]:::rect
+    MU --> DP[Daftar Pustaka]:::rect
+    MU --> P[Pengembang]:::rect
     
-    A -.-> F[Ringkasan 🗺️]:::optNode
-    A -.-> G[Glosarium 🔍]:::optNode
-
-    C --> C1(7 Bab Materi):::subNode
-    C1 --> C2(Mini Kuis B/S):::subNode
+    M --> M1[Pendahuluan]:::rect
+    M --> M2[Materi 1 - 7]:::rect
+    M --> M3[Penutup & Kuis]:::rect
     
-    D --> D1(Galeri 3 Karya):::subNode
-    D1 --> D2(Highlight 4 Struktur):::subNode
+    BC --> BC1[Contoh Novel]:::rect
+    BC --> BC2[Contoh Film]:::rect
+    BC --> BC3[Contoh Lagu]:::rect
     
-    E --> E1(20 Soal Pilihan Ganda):::subNode
-    E --> E2(5 Soal Uraian):::subNode
-    E1 --> E3(Papan Skor & Bintang):::subNode
-    E2 --> E4(Cek Kunci & Evaluasi):::subNode
+    L --> L1[Pilihan Ganda]:::rect
+    L --> L2[Latihan Uraian]:::rect
+    
+    P -.-> K([Keluar]):::ellipse
 ```
 
 ## 💻 Teknologi yang Digunakan

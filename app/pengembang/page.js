@@ -1,15 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '@/components/layout/Footer';
-import { dapusData } from '@/data/dapus';
 
 export default function PengembangPage() {
-  const [showDapus, setShowDapus] = useState(false);
-
   return (
     <div className="min-h-screen bg-bg">
       {/* Header */}
@@ -71,74 +67,8 @@ export default function PengembangPage() {
             </div>
           </div>
         </motion.div>
-
-        {/* References Button moved from Footer */}
-        <motion.button
-          onClick={() => setShowDapus(true)}
-          className="w-full mt-6 bg-white border-3 border-ink rounded-2xl brutal-shadow brutal-shadow-hover px-5 py-4 flex items-center justify-center gap-3 group transition-all"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          <span className="text-2xl group-hover:scale-110 transition-transform">📖</span>
-          <div className="text-center">
-            <p className="font-heading font-bold text-sm text-ink">Daftar Pustaka</p>
-            <p className="text-xs text-ink-lighter">{dapusData.length} referensi ilmiah</p>
-          </div>
-        </motion.button>
       </div>
-
       <Footer />
-
-      {/* Daftar Pustaka Modal */}
-      <AnimatePresence>
-        {showDapus && (
-          <motion.div
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setShowDapus(false)}
-          >
-            <motion.div
-              className="bg-white border-3 border-ink rounded-2xl brutal-shadow max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="font-heading text-2xl font-bold text-ink flex items-center gap-2">
-                  📖 Daftar Pustaka
-                </h2>
-                <button
-                  onClick={() => setShowDapus(false)}
-                  className="w-8 h-8 rounded-full border-2 border-ink flex items-center justify-center hover:bg-error hover:text-white transition-colors font-bold"
-                >
-                  ✕
-                </button>
-              </div>
-              <ol className="space-y-3">
-                {dapusData.map((ref) => (
-                  <li key={ref.id} className="text-sm text-ink-light leading-relaxed pl-2 border-l-3 border-primary/30">
-                    <p>{ref.text}</p>
-                    {ref.doi && (
-                      <a
-                        href={ref.doi}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-secondary hover:underline text-xs mt-1 inline-block"
-                      >
-                        {ref.doi}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ol>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

@@ -71,15 +71,15 @@ export default function HomePage() {
       {/* Header */}
       <header className="pt-6 pb-4 px-4">
         <div className="max-w-lg mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-2">
+          <div className="flex items-center justify-center mb-2 -space-x-6">
             <Image
-              src="/images/logo.png"
+              src="/images/logo1.png"
               alt="Logo Ulasin"
-              width={48}
-              height={48}
-              className="rounded-xl"
+              width={200}
+              height={200}
+              className="rounded-xl z-10 relative"
             />
-            <h1 className="font-heading text-3xl md:text-4xl font-bold text-ink">
+            <h1 className="font-heading text-3xl md:text-4xl font-bold text-ink relative z-20">
               Ulasin
             </h1>
           </div>
@@ -123,7 +123,7 @@ export default function HomePage() {
       <div className="max-w-lg mx-auto px-4 pb-8">
         {/* Si Ulas at Start */}
         <div className="flex justify-center mb-2">
-          <SiUlas pose="hello" size={100} />
+          <SiUlas pose="hello" size={300} />
         </div>
         <p className="text-center font-heading font-bold text-ink-light text-sm mb-6">
           Mulai petualanganmu dari sini! 👇
@@ -166,9 +166,8 @@ export default function HomePage() {
                               {Array.from({ length: status.total }, (_, i) => (
                                 <div
                                   key={i}
-                                  className={`w-2.5 h-2.5 rounded-full border border-ink ${
-                                    i < status.completed ? 'bg-success' : 'bg-white/50'
-                                  }`}
+                                  className={`w-2.5 h-2.5 rounded-full border border-ink ${i < status.completed ? 'bg-success' : 'bg-white/50'
+                                    }`}
                                 />
                               ))}
                             </div>

@@ -64,7 +64,7 @@ export default function GuidePopup() {
 
             {/* Mascot */}
             <div className="flex justify-center mt-4 mb-4">
-              <SiUlas pose="hello" size={140} />
+              <SiUlas pose="hello" size={300} />
             </div>
 
             {/* Speech bubble */}

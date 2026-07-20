@@ -1,6 +1,5 @@
 import { Nunito, Fredoka } from 'next/font/google';
 import './globals.css';
-import BottomNav from '@/components/layout/BottomNav';
 import { ProgressProvider } from '@/context/ProgressContext';
 
 const nunito = Nunito({
@@ -28,7 +27,6 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen flex flex-col font-body antialiased">
         <ProgressProvider>
           <main className="flex-1">{children}</main>
-          <BottomNav />
         </ProgressProvider>
       </body>
     </html>

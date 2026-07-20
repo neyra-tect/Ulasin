@@ -191,14 +191,13 @@ export const materiData = [
           {
             title: '3. Kata Kerja Mental dan Kata Sifat Penilai',
             paragraphs: [
-              '<strong>Kata kerja mental</strong> menggambarkan sikap, perasaan, atau respons batin penulis, seperti <em>merasakan, menikmati, mengagumi</em>.',
-              '<strong>Kata sifat penilai (adjektiva)</strong> memberikan penilaian terhadap kualitas karya, misalnya <em>menarik, membosankan, apik</em>.',
+              'Menurut Rosmayanti, Mahsun, dan Mahyudi (2020) menjelaskan bahwa kata kerja mental digunakan untuk menunjukkan sikap atau kondisi batin seseorang ketika mengalami suatu keadaan, atau respons batin penulis, seperti <em>merasakan, menikmati, mengagumi</em>. Sedangkan kata sifat penilai (adjektiva) memberikan penilaian terhadap kualitas karya, misalnya <em>menarik, membosankan, apik</em>.',
             ],
           },
           {
             title: '4. Kalimat Kompleks',
             paragraphs: [
-              'Kalimat kompleks terdiri atas dua klausa atau lebih yang dihubungkan oleh konjungsi. Penggunaan kalimat kompleks membantu penulis menyampaikan penilaian dan alasan secara lebih jelas.',
+              'Kalimat kompleks adalah kalimat yang terdiri atas dua klausa atau lebih yang dihubungkan oleh konjungsi koordinatif maupun subordinatif (Kumalasari, Dawud, & Sunaryo, 2017). Penggunaan kalimat kompleks membantu penulis menyampaikan penilaian dan alasan secara lebih jelas.',
             ],
           },
         ],
